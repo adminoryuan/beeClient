@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message Message {
+    //消息id
+    uint32 messageId=1;
+
+    bytes body=2;
+}
+
+//控制数据
+message ctrMeg {
+    
+
+}
