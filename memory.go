@@ -28,3 +28,12 @@ func getMemoryInfo() common.Memoryinfo {
 	}
 	return common.Memoryinfo{Memused: all[1], Swapused: all[2]}
 }
+func getMemorySum() string {
+	rex := `(\d+.\dGi?)`
+
+	re, _ := regexp.Compile(rex)
+	info := untils.GetProcessOutSteam(untils.BinBash, "-c", "free -h")
+	all := re.FindStringSubmatch(string(info))
+
+	return all[1]
+}

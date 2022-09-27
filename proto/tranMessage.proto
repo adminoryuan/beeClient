@@ -3,8 +3,9 @@ option go_package="../common";
 message Message {
     //消息id
     uint32 messageId=1;
-
-    bytes body=2;
+    string apikey=2;
+    string node=3;
+    bytes body=4;
 }
 
 //控制数据

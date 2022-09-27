@@ -28,7 +28,7 @@ message processinfo {
 }
 
 message diskinfo {
-    
+    int32 diskUser=1;    
 }
 
 //收集消息汇总
@@ -37,5 +37,15 @@ message collectInfo {
     diskinfo disk=1;
     processinfo proinfo=2;
     memoryinfo meminfo=3;
+}
+
+//服务器硬件信息
+message Computerinfo { 
+    string cpuCount=1;
+    string cpuCore=2;
+    string memCount=3;
+    string diskCount=4;
+    string mainBoard=5;
+    
 }
 

@@ -5,6 +5,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"os/exec"
 )
@@ -32,12 +33,14 @@ func ReadChangeCmdCount(commandName string, len int, params ...string) (string, 
 	cmd := exec.Command(commandName, params...)
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
-		fmt.Println("cmd.StdoutPipe: ", err)
+		fmt.Print("cmd.StdoutPipe: ", err)
 		return "", err
 	}
 	cmd.Stderr = os.Stderr
 	err = cmd.Start()
 	if err != nil {
+		log.Print("cmd start  error")
+
 		return "", err
 	}
 	res := ""

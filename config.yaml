@@ -1,8 +1,8 @@
 server:
   addr: 127.0.0.1
-  port: 8081
-  apikey: "asd;aklakdasdjksjdkasd"
-  name: "配置一个name"
+  port: 9091
+  apikey: "asdkjaslkdjlaksjdlkasjdk"
+  node: "127.0.0.1:8888"
 tran:
   interval: 5 #ms
   

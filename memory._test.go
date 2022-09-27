@@ -6,8 +6,7 @@ import (
 )
 
 func TestMemeory(t *testing.T) {
-	info := getMemoryInfo()
-	fmt.Println(info.Memused)
+	info := getMemorySum()
+	fmt.Println(info)
 
-	fmt.Println(info.Swapused)
 }
